@@ -22,6 +22,8 @@ cd todo-list
 1. Add a new task by entering the title, description, and due date in the input fields, then clicking the "Add Task" button.
 2. Manage your tasks by  editing the details, or deleting them using the provided buttons.
 
+## ScreenShot
 
+![App Screenshot](assets/todo-app-screenshot.png)
 
 
