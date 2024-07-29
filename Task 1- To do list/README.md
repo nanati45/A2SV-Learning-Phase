@@ -24,6 +24,6 @@ cd todo-list
 
 ## ScreenShot
 
-![App Screenshot](assets/todo-app-screenshot.png)
+![App Screenshot](assets/todo.png)
 
 
