@@ -1,21 +1,28 @@
 "use strict";
-const taskInput = document.getElementById('task-input');
-const addTaskButton = document.getElementById('add-task');
-const listTask = document.getElementById('task-list');
-//set the date
-function displayDate() {
-    let date = new Date();
-    let dateString = date.toString().split(" ");
-    document.querySelector('.date').innerHTML = dateString[1] + " " + dateString[2] + ", " + dateString[3];
-}
+let taskInput;
+let addTaskButton;
+let listTask;
 window.onload = function () {
+    taskInput = document.getElementById('task-input');
+    addTaskButton = document.getElementById('add-task');
+    listTask = document.getElementById('task-list');
+    addTaskButton.addEventListener('click', addTask);
+    taskInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            addTask();
+        }
+    });
     displayDate();
 };
 let tasks = [];
 function addTask() {
-    const taskText = taskInput.value.trim();
+    const taskText = taskInput.value.trim() || "";
     if (taskText) {
-        tasks.push(taskText);
+        const newTask = {
+            text: taskText,
+            completed: false,
+        };
+        tasks.push(newTask);
         updateTask();
         taskInput.value = '';
     }
@@ -26,8 +33,8 @@ function updateTask() {
         const taskItem = document.createElement('div');
         taskItem.classList.add('task-item');
         const taskText = document.createElement('span');
-        taskText.textContent = task;
-        taskText.contentEditable = "true";
+        taskText.textContent = task.text;
+        taskText.contentEditable = 'true';
         taskText.classList.add('task-text');
         const buttons = document.createElement('span');
         buttons.classList.add('buttons');
@@ -37,7 +44,7 @@ function updateTask() {
         editButton.addEventListener('click', () => {
             const newTaskText = prompt('Enter the new task:');
             if (newTaskText && newTaskText.trim() !== '') {
-                tasks[index] = newTaskText.trim();
+                tasks[index].text = newTaskText.trim();
                 updateTask();
             }
         });
@@ -58,10 +65,8 @@ function deleteTask(index) {
     tasks.splice(index, 1);
     updateTask();
 }
-//Event listeners
-addTaskButton.addEventListener('click', addTask);
-taskInput.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-        addTask();
-    }
-});
+function displayDate() {
+    let dateToday = new Date();
+    let date = dateToday.toString().split(" ");
+    document.querySelector('.date').innerHTML = date[1] + " " + date[2] + ", " + date[3];
+}
