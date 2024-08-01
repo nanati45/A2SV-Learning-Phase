@@ -1,30 +1,71 @@
-# React + TypeScript + Vite
+# Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple task management application built with React, TypeScript, and CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add new tasks
+- Mark tasks as completed
+- Edit task names
+- Delete tasks
+- Responsive design
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js (version 14 or higher)
+- npm (version 6 or higher)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/task-manager.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Navigate to the project directory
+
+```bash
+cd task-manager
+```
+
+3. Install the dependencies:
+
+```bash
+npm install
+```
+
+### Running the App
+
+1. Start the development server:
+
+```bash
+npm start
+```
+
+2. Open your web browser and navigate to http://localhost:3000.
+
+### Usage
+
+1. Type the task name in the input field and press "Add" to create a new task.
+2. Click the "Edit" button to modify a task's name.
+3. Click the "Delete" button to remove a task.
+4. Click the task item to mark it as completed or uncompleted.
+
+### Technologies Used
+
+React
+TypeScript
+CSS
+
+### ScreenShots
+
+Add
+![App Screenshot](assets/11.png)
+
+Update
+![App Screenshot](assets/22.png)
+Updated
+![App Screenshot](assets/22.png)

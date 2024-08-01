@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-
-interface Task {
+import Header from "./header";
+import TaskLists from "./TaskLists";
+export interface Task {
   id: string;
   name: string;
   isCompleted: boolean;
@@ -52,37 +53,18 @@ const AddTask: React.FC = () => {
 
   return (
     <div className="container">
-      <h1>To Do List</h1>
-      <input
-        type="text"
-        placeholder="Add your Task"
-        value={task}
-        onChange={handleInputChange}
+      <Header
+        task={task}
+        handleAdd={handleAdd}
+        handleInputChange={handleInputChange}
+        handleUpdate={handleUpdate}
+        editingTaskId={editingTaskId}
       />
-      {editingTaskId !== null ? (
-        <button className="edit-button" onClick={handleUpdate}>
-          Update
-        </button>
-      ) : (
-        <button className="add-button" onClick={handleAdd}>
-          Add Task
-        </button>
-      )}
-      <div>
-        {tasks.map((t) => (
-          <div key={t.id} className="task-item">
-            {t.name}
-            <div className="task-actions">
-              <button className="edit-button" onClick={() => handleEdit(t.id)}>
-                Edit
-              </button>
-              <button className="delete-button" onClick={() => handleDelete(t.id)}>
-                Delete
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
+      <TaskLists
+        tasks={tasks}
+        handleEdit={handleEdit}
+        handleDelete={handleDelete}
+      />
     </div>
   );
 };
