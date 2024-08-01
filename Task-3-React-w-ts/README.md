@@ -60,12 +60,13 @@ React
 TypeScript
 CSS
 
-### ScreenShots
+### Screenshots
 
 Add Task
-![App Screenshot](assets/11.png)
+![Add Task Screenshot](src/assets/11.png)
 
 Update Task
-![App Screenshot](assets/22.png)
+![Update Task Screenshot](src/assets/22.png)
+
 Updated Task
-![App Screenshot](assets/22.png)
+![Updated Task Screenshot](src/assets/33.png)
