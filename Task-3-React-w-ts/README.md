@@ -62,10 +62,10 @@ CSS
 
 ### ScreenShots
 
-Add
+Add Task
 ![App Screenshot](assets/11.png)
 
-Update
+Update Task
 ![App Screenshot](assets/22.png)
-Updated
+Updated Task
 ![App Screenshot](assets/22.png)
