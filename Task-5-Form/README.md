@@ -1,30 +1,52 @@
-# React + TypeScript + Vite
+# Contact Form Validation with React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
 
-Currently, two official plugins are available:
+This is a simple React component that implements a contact form with client-side validation. The form includes fields for name, email, and message, and it ensures that all fields are filled out correctly before allowing the form to be submitted.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Validates that all fields are filled out
+- Ensures that the email field contains a valid email address
+- Provides clear and user-friendly error messages
+- Leverages React's built-in state management and event handling
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
 
-- Configure the top-level `parserOptions` property like this:
+To use this component in your project, follow these steps:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/contact-form-validation.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Navigate to the project directory:
+
+```bash
+cd  Task-5-Form
+```
+
+3. Install the dependencies:
+
+```bash
+npm install
+```
+
+### The ContactForm component will render a form with the following fields:
+
+Name (required)
+Email (required and must be a valid email address)
+Message (required)
+If any of the fields are left empty or the email is invalid, the form will not submit and will display an error message. Once all fields are filled out correctly, the form can be submitted
+
+## Screenshots
+
+The form
+![The Form](src/assets/22.png)
+
+If the fields are not filled
+![Required](src/assets/11.png)
+
+If the email is not valid email
+![Invalid email](src/assets/33.png)
