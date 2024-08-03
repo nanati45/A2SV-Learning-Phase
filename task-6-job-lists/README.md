@@ -27,8 +27,8 @@ npm install
 ## Screen Shots
 
 Job lists
-![job lists page](image/list.png)
+![job lists page](public/image/list.png)
 
 Job details
-![job lists page](image/details.png)
-![job lists page](image/details1.png)
+![job lists page](public/image/details.png)
+![job lists page](public/image/details1.png)
