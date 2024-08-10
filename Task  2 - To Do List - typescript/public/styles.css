@@ -62,6 +62,7 @@ body {
     border: 2px solid #bcd6b1;
     border-radius: 10px;
     min-height: 40px;
+    display: flex;
 }
 .task-text {
     flex-grow: 1;

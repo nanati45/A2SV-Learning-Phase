@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do List</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h1>To-Do List</h1>
-      
-      <!-- <img src="img/note.png" alt="note"> -->
-      <p class="date">
-      </p>
-    </header><br><br>
-    <div class="add">
-      <input type="text" id="task-input" placeholder="Enter a task">
-      <button id="add-task" onclick="addTask()" >Add Task</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>To-Do List</h1>
+
+        <!-- <img src="img/note.png" alt="note"> -->
+        <p class="date"></p>
+      </header>
+      <br /><br />
+      <div class="add">
+        <input type="text" id="task-input" placeholder="Enter a task" />
+        <button id="add-task" onclick="addTask()">Add Task</button>
+      </div>
+      <ul id="task-list">
+        <div
+          style="
+            display: flex;
+            background: #000;
+            border-radius: 15px;
+            padding: 5px;
+            color: white;
+            flex-wrap: wrap;
+            overflow-x: hidden;
+            align-items: center;
+          "
+        >
+          <div style="width: 60%">
+            
+          </div>
+          <div style="margin-left: auto">
+            <button>edit</button>
+            <button>delete</button>
+          </div>
+        </div>
+      </ul>
     </div>
-    <ul id="task-list"></ul>
-  </div>
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

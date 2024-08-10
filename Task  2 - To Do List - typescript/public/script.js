@@ -32,7 +32,7 @@ function updateTask() {
     tasks.forEach((task, index) => {
         const taskItem = document.createElement('div');
         taskItem.classList.add('task-item');
-        const taskText = document.createElement('span');
+        const taskText = document.createElement('p');
         taskText.textContent = task.text;
         taskText.contentEditable = 'true';
         taskText.classList.add('task-text');
