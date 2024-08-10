@@ -64,11 +64,3 @@ yarn dev
 5. Once signed in, you can view the list of job postings and click on a job to see its details.
 
 ### Videos
-Screencast of signup and signin
-file:///home/nanati/Videos/Screencasts/Screencast%20from%2010-08-2024%2010:04:43%20%E1%8C%A1%E1%8B%8B%E1%89%B5.webm
-
-Form Validation
-file:///home/nanati/Videos/Screencasts/Screencast%20from%2010-08-2024%2010:11:38%20%E1%8C%A1%E1%8B%8B%E1%89%B5.webm
-
-Invalid OTP
-file:///home/nanati/Videos/Screencasts/Screencast%20from%2010-08-2024%2011:00:02%20%E1%8C%A1%E1%8B%8B%E1%89%B5.webm
