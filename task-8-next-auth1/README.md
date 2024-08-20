@@ -70,10 +70,10 @@ yarn dev
 ### Screenshots
 
 Signup page
-![signup]('public/image/signup.png')
+![signup ](public/image/signup.png)
 Login page
-![login]('public/image/login.png')
+![login](public/image/login.png)
 Posts page
-![posts]('public/image/posts.png')
+![posts](public/image/posts.png)
 Bookmarks page
-![bookmarks]('public/image/bookmarks.png')
+![bookmarks](public/image/bookmarks.png)
