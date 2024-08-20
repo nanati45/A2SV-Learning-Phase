@@ -70,10 +70,10 @@ yarn dev
 ### Screenshots
 
 Signup page
-![signup]('assets/signup.png')
+![signup]('public/assets/signup.png')
 Login page
-![signup]('assets/signup.png')
+![signup]('public/assets/signup.png')
 Posts page
-![signup]('assets/signup.png')
+![signup]('public/assets/signup.png')
 Bookmarks page
-![signup]('assets/signup.png')
+![signup]('public/assets/signup.png')
