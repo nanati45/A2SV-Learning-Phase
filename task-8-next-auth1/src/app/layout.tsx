@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Epilogue } from "@next/font/google";
+import { Epilogue } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Create Next App",

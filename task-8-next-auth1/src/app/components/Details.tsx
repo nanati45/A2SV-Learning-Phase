@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { Data, JobPostByIdType } from "../../../../types/type";
-import { Poppins } from "@next/font/google";
+import { Data, JobPostByIdType } from "../../../types/type";
+import { Poppins } from "next/font/google";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["700"] });
 interface propType {

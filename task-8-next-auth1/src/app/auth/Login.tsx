@@ -10,6 +10,9 @@ import { Poppins } from "@next/font/google";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["700"] });
 const Login = () => {
+  // const session = useSession();
+  // console.log("here we go", session);
+
   const [errorCredential, setErrorCredential] = useState<
     string | null | undefined
   >("");
@@ -30,14 +33,14 @@ const Login = () => {
     });
     console.log("data is ", result);
     if (result?.ok) {
+      console.log("noooowwww ");
       router.push("/posts");
+      console.log("sooo whyy");
     } else {
       setErrorCredential("Invalid Credentials");
     }
   };
-  const { data: session } = useSession();
-  console.log({ session });
-  console.log("session ", session?.accessToken);
+
   return (
     <div className="grid grid-cols-2 ">
       <div className="flex justify-center items-center h-full">
@@ -82,6 +85,7 @@ const Login = () => {
             />
             <p className="text-red-600 font-sans">{errors.password?.message}</p>
             <button
+              id="submit"
               type="submit"
               className="bg-[#4640DE] w-full text-white font-extrabold  rounded-full my-2 py-3"
             >

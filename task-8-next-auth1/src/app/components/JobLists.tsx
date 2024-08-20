@@ -1,6 +1,6 @@
 import React from "react";
 import JobCard from "./JobCard";
-import { JobPosting } from "../../../../types/type";
+import { JobPosting } from "../../../types/type";
 import Link from "next/link";
 
 // export interface Card {
@@ -15,9 +15,7 @@ const JobLists = ({ data }: JobPosting) => {
   return (
     <div>
       {data.map((da) => (
-        <Link href={`/posts/${da.id}`}>
-          <JobCard {...da} />
-        </Link>
+        <JobCard {...da} />
       ))}
     </div>
   );

@@ -1,6 +1,10 @@
+"use client";
 import React from "react";
 import Button from "./Button";
-import { Data, JobPosting } from "../../../../types/type";
+import { Data, JobPosting } from "../../../types/type";
+import Bookmark from "./Bookmark";
+import Link from "next/link";
+import { SessionProvider } from "next-auth/react";
 
 // interface Card {
 //   src: string;
@@ -9,13 +13,21 @@ import { Data, JobPosting } from "../../../../types/type";
 //   companyAddress: string;
 //   description: string;
 // }
-const JobCard = ({ logoUrl, title, description, orgName, location }: Data) => {
+const JobCard = ({
+  id,
+  logoUrl,
+  title,
+  description,
+  orgName,
+  location,
+  isBookmarked,
+}: Data) => {
   const notUrlImage =
     "https://img.freepik.com/free-vector/premium-collection-badge-design_53876-63011.jpg?t=st=1722932275~exp=1722935875~hmac=0ca554c5cf1fb181cebb9f7a746b0e74ad14ec51b794a8404f9b8fbcdacc0e56&w=740";
   return (
     <div
-      className="flex    bg-white max-w-3xl  justify-items-center pt-8 pb-4 px-6 my-8
-    rounded-3xl border border-gray-300"
+      className="flex    bg-white max-w-3xl  justify-center  pt-8 pb-4 px-6 my-8
+    rounded-3xl border border-gray-300 "
     >
       <div className="px-4 py-2 shrink-0 rounded-full">
         <img
@@ -26,15 +38,23 @@ const JobCard = ({ logoUrl, title, description, orgName, location }: Data) => {
           className="rounded-full"
         />
       </div>
-      <div>
+      <div className="w-full">
         <div>
-          <h1 className="font-bold  pb-2">{title} </h1>
+          <div className="flex justify-between ">
+            <div>
+              <h1 className="font-bold  pb-2">{title} </h1>
 
-          <p className="text-gray-500  pb-2">
-            {orgName} . {location}
-          </p>
-
-          <p className="  pb-4 text-justify">{description}</p>
+              <p className="text-gray-500  pb-2">
+                {orgName} . {location}
+              </p>
+            </div>
+            <div>
+              <Bookmark isBookmarked={isBookmarked} id={id} />
+            </div>
+          </div>
+          <Link href={`/posts/${id}`}>
+            <p className="  pb-4 text-justify">{description}</p>
+          </Link>
         </div>
 
         <div className="flex  mb-2">

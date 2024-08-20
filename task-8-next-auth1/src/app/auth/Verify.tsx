@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from "react";
 import Otp from "./Otp";
 import { Poppins } from "@next/font/google";

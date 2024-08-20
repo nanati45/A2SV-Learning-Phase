@@ -1,10 +1,4 @@
-import type {
-  Awaitable,
-  NextAuthOptions,
-  RequestInternal,
-  User,
-} from "next-auth";
-import NextAuth from "next-auth";
+import type { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 export const options: NextAuthOptions = {
@@ -34,10 +28,20 @@ export const options: NextAuthOptions = {
           }
         );
         const user = await response.json();
-        console.log("user", user);
+        console.log("user is", user);
 
-        if (response.ok && user) {
-          return user;
+        if (response.status === 200) {
+          return {
+            id: user.data.id,
+            email: user.data.email,
+            accessToken: user.data.accessToken,
+            refreshToken: user.data.refreshToken,
+            profileComplete: user.data.profileComplete,
+            message: user.message,
+            success: user.success,
+            name: user.data.name,
+            role: user.data.role,
+          };
         }
         return null;
       },
@@ -45,20 +49,27 @@ export const options: NextAuthOptions = {
   ],
   callbacks: {
     async signIn({ user }) {
-      if (user) return true;
-      return false;
+      // if (user) return true;
+      return true;
     },
     async jwt({ token, user }) {
-      token.email = user.email;
-      token.name = user.name;
-      return { ...token, user };
+      console.log("jwt");
+      if (user) {
+        token.accessToken = user.accessToken;
+        token.refreshToken = user.refreshToken;
+      }
+      return token;
     },
-    async session({ token, session, user }) {
-      session.user = token;
+    async session({ token, session }) {
+      session.accessToken = token.accessToken;
+      session.refreshToken = token.refreshToken;
+      console.log("session is from session", { token, session });
+
       return session;
     },
   },
   secret: process.env.NEXTAUTH_SECRET as string,
+  session: {
+    strategy: "jwt",
+  },
 };
-
-export default NextAuth(options);

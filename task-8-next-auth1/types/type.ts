@@ -56,3 +56,21 @@ export interface Data {
 //   companyAddress: string;
 //   description: string;
 // }
+export interface Result {
+  success: boolean;
+  message: string;
+  data: BookmarkData[];
+  count: number;
+  errors: string | null;
+}
+
+export interface BookmarkData {
+  eventID: string;
+  title: string;
+  opType: string;
+  orgName: string;
+  datePosted: string;
+  dateBookmarked: string;
+  logoUrl: string;
+  location: string;
+}
