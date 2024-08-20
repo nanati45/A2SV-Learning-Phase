@@ -72,8 +72,8 @@ yarn dev
 Signup page
 ![signup]('public/assets/signup.png')
 Login page
-![signup]('public/assets/signup.png')
+![login]('public/assets/login.png')
 Posts page
-![signup]('public/assets/signup.png')
+![posts]('public/assets/posts.png')
 Bookmarks page
-![signup]('public/assets/signup.png')
+![bookmarks]('public/assets/bookmarks.png')
