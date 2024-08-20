@@ -9,6 +9,7 @@ This is a job listing application built with Next.js, NextAuth.js, Tailwind CSS,
 3. Secure server-side rendering (SSR) with user sessions
 4. Job listing display
 5. Job details page with additional information
+6. Bookmark functionality to save and view favorite job postings
 
 ## Getting Started
 
@@ -62,5 +63,17 @@ yarn dev
 4. if you're already signed up click the login link and enter yoour email and password
 
 5. Once signed in, you can view the list of job postings and click on a job to see its details.
+6. Bookmarking Jobs:
+   Click the bookmark icon next to a job listing to save it to your bookmarks.
+   Navigate to the Bookmarks page to view and manage your bookmarked jobs.
 
-### Videos
+### Screenshots
+
+Signup page
+![signup]('/assets/signup.png')
+Login page
+![signup]('/assets/signup.png')
+Posts page
+![signup]('/assets/signup.png')
+Bookmarks page
+![signup]('/assets/signup.png')

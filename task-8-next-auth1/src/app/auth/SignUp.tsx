@@ -60,7 +60,7 @@ const SignUp: React.FC = () => {
           height={40}
           className="p-2"
         />
-        <p className="font-bold">Sign up with Google</p>
+        <p className="font-bold">Sign in with Google</p>
       </div>
       <div className="flex justify-between my-3">
         <p className="border-t w-[20%] mx-1 my-3"></p>
