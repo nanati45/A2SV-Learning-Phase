@@ -23,7 +23,7 @@ npm or yarn
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/ynanati45/task-8-next-auth.git
+git clone https://github.com/nanati45/task-8-next-auth.git
 ```
 
 2. Install the dependencies:
