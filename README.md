@@ -109,7 +109,7 @@ Faster filtering options for the job search platform.
 
 # License
 
-This project repository is licensed under the [MIT License](./LICENSE).
+This project repository is licensed under the [MIT License](LICENSE).
 
 
 
