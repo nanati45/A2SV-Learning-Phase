@@ -1,7 +1,4 @@
-
-# Project Title
-
-Internship Projects - Web Development - at Eskalate
+# My Internship Projects - Web Development - at Eskalate
 
 # Description
 
